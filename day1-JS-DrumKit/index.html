@@ -5,6 +5,9 @@
         <title>JS Drum Kit</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" type="image/png" sizes="96x96" href="assets/icons8-snare-drum-96.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="keys">
@@ -81,12 +84,13 @@
             //remove playing class => creates the transition
             function removeTransition(e) {
                 //only want to fire when the event == transform
-                if (e.propertyName !== 'transform') return
-                this.classList.remove('playing')
+                if (e.propertyName !== 'transform') return;
+                //remove class playing
+                e.target.classList.remove('playing');
             };
 
             //listen to all keys, add event that will fire after it has been pressed
-            const keys = Array.from(document.querySelectorAll('.key'));
+            const keys = document.querySelectorAll('.key');
             keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
             //listen to keydown
