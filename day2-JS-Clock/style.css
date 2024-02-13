@@ -1,0 +1,44 @@
+html {
+    padding: 0;
+    margin: 0;
+    background-color: bisque;
+    font-size: 10px;
+}
+
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    border: 1rem solid black;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+  }
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    top: 50%;
+    position: absolute;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s  ;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1)
+  }
