@@ -1,8 +1,31 @@
+:root {
+    --gradient: linear-gradient(
+        45deg ,
+        #DAE2F8,
+        #D6A4A4
+        )
+}
+
+
 html {
+    font-family: 'Rubik';
     font-size: 10px;
+    color: rgb(249, 249, 255);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-image: var(--gradient);
+    background-size: 300%;
+    animation: bg-gradient 10s infinite alternate;
+}
+
+@keyframes bg-gradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 
 .keys {
@@ -13,22 +36,21 @@ html {
 }
 
 .key {
-    border: .4rem solid black;
+    border: .3rem solid #ffffff;
     border-radius: .5rem;
     font-size: 1.5rem;
     padding: 1rem;
     width: 10rem;
     margin: 1rem;
     text-align: center;
-    /* transform: all 0.75s ease; */
-    transition: all 0.75s;
+    transition: all 0.5s ease;
 
 }
 
 .playing {
     transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+    border-color: #fcfcfc;
+    box-shadow: 0 0 1rem #fcfcfc;
 }
 
 kbd {
@@ -37,7 +59,7 @@ kbd {
 }
 
 .sound {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
 }
