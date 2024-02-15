@@ -25,12 +25,19 @@
         <script>
             const inputs = document.querySelectorAll('.content input');
 
-            function handleUpdate () {
-                console.log(this.value)
+            function handleUpdate() {
+                //data- is an arbitray attribute to add on addtional info to the target element
+                //this case add 'px' if not defined " " nothing
+                const suffix = this.dataset.sizing || " ";
+
+                //set proproty based on names
+                document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
             };
 
+            //listen to mouse move and value change then call handle function
             inputs.forEach((input) => input.addEventListener('change', handleUpdate));
             inputs.forEach((input) => input.addEventListener('mousemove', handleUpdate));
+
 
         </script>
     </body>
