@@ -1,0 +1,65 @@
+:root {
+    --gradient: linear-gradient(
+        45deg ,
+        #DAE2F8,
+        #D6A4A4
+        )
+}
+
+
+html {
+    font-family: 'Rubik';
+    font-size: 10px;
+    color: rgb(249, 249, 255);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: var(--gradient);
+    background-size: 300%;
+    animation: bg-gradient 10s infinite alternate;
+}
+
+@keyframes bg-gradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.keys {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    border: .3rem solid #ffffff;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 10rem;
+    margin: 1rem;
+    text-align: center;
+    transition: all 0.5s ease;
+
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #fcfcfc;
+    box-shadow: 0 0 1rem #fcfcfc;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
