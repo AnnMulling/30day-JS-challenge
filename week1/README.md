@@ -1,14 +1,7 @@
-
-
- # 30-day, 30-project challenge by Wes Bos
- Feel free to join me on this coding journey! 
-
-🌟 Here's the link to the JS30 challenge: [JS30 Challenge](https://lnkd.in/g9GVMuyP).
-
-### what I have done so far...
+### Week 1
 ## Day1 JavaScript Drum Kit 🥁✨
 <img width="300" height="200" src=https://github.com/AnnMulling/30day-JS-challenge/assets/105256768/8ce42108-e2c7-4977-8a12-fade8a32652f/>
-<p>This neat little project features different keys that produce sounds when pressed. 
+<p>This neat little project features different keys that produce sounds when pressed.
 It's a fantastic way for me to refresh my knowledge of JS DOM manipulation.
 Plus, I discovered that syncing audio to HTML elements is surprisingly straightforward!</p>
 
@@ -21,7 +14,7 @@ Plus, I discovered that syncing audio to HTML elements is surprisingly straightf
 <p>
   Today's project involved a simple setup with HTML and CSS. What caught my attention was the utilization of CSS variables,
   something I hadn't experimented with before.
-  I delved into using CSS variables and discovered their power in enabling dynamic adjustments via JavaScript. 
+  I delved into using CSS variables and discovered their power in enabling dynamic adjustments via JavaScript.
   It's a 🌟 nifty trick that injects a sense of liveliness and interactivity into the user interface.
 </p>
 
@@ -46,7 +39,7 @@ Plus, I discovered that syncing audio to HTML elements is surprisingly straightf
 ## Day6 Ajax Type Ahead ❓
 <img width="300" height="200" src=https://github.com/AnnMulling/30day-JS-challenge/assets/105256768/d0249468-dd60-4518-8e2e-8a2782e9564f>
 <p>
-  Today's focus was on practicing regular expressions (Regex), which hasn't been the easiest topic for me to grasp. 
+  Today's focus was on practicing regular expressions (Regex), which hasn't been the easiest topic for me to grasp.
   I've tended to avoid using them in the past, but this project gave  me a chance to delve into Regex in a simple, practical, and enjoyable way. 😇
   On top of that, I must say, that the CSS in this project is outstanding! It adds an extra level of visual appeal. 💖
 </p>
