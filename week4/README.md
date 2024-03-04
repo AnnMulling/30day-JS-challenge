@@ -27,3 +27,18 @@
 <p>🌟 ”once” : allows event listeners to be triggered only once and then automatically removed.</p>
 
 <p>🌟 ”capture” :  the phase in which an event listener is triggered, in this phase, event travels from the root of the DOM to the target.</p>
+
+
+## Day 26 🔽 Stripe DropDown Menu
+
+<img width="300" height="200" src="./images/day26.gif">
+
+<p>Today’s project is quite eye-opening!!</p>
+
+<p>⭐ Explored how to create an interactive  dropdown menu/p>
+
+<p>⭐ Learned to implement smooth animations and transitions using CSS and JavaScript</p>
+
+<p>⭐ Created a dropdown menu that expands and collapses gracefully as  users interact with it</p>
+
+<p>Need time to master those techniques to create seamless animations and transitions though !!</p>
