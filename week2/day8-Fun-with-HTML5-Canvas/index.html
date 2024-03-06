@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="main">
+        <canvas id="draw" width="1000" height="500"></canvas>
+        <div class="buttons">
+            <button class="to-draw">Draw</button>
+            <button class="to-erase">Erase</button>
+        </div>
+    </div>
+<script>
+    const canvas = document.querySelector('#draw');
+    const drawButton = document.querySelector('.to-draw');
+    const eraseButoon = document.querySelector('.to-erase');
+    //this is where we draw things on not the acutal HTML
+    //can be 2d or 3d
+    const ctx = canvas.getContext('2d');
+    //set width and height
+    // normally default to 800x800
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+
+    //base setting
+    //set color
+    ctx.stronkeStyle = '#BADA55'
+    //when lines meet
+    ctx.lineJoin = 'round';
+    //the end of the line
+    ctx.lineCap = 'round';
+    ctx.globalCompositeOperation = 'color'
+    //size
+    ctx.lineWidth = 50;
+
+    //will turn true when click down only draw when click and drag
+    //when let go will be false
+    let isDrawing = false;
+    //these two indecate where the line starts and where they end
+    let lineX = 0;
+    let lineY = 0;
+    let hue = 0;
+
+    //call every time when mouse moves(click) on the canvas
+    function draw(e) {
+       if (!isDrawing) return;
+
+       ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+       ctx.beginPath();
+       //start from
+       ctx.moveTo(lineX, lineY);
+       //go to
+       ctx.lineTo(e.offsetX, e.offsetY);
+       ctx.stroke();
+       //hue Light, Saturation
+       //update the varieble to be where the mouse was and continue from there
+       [lineX, lineY] = [e.offsetX, e.offsetY];
+
+       hue++;
+        //reset hue
+       if(hue >= 360) {
+            hue = 0;
+        }
+
+    };
+    //this will fire before mouse starts to move again
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        //update the current mouse position
+        [lineX, lineY] = [e.offsetX, e.offsetY]
+    });
+
+    //this will track mouse movement, displays the position of mouse
+    canvas.addEventListener('mousemove', draw)
+    //only fire draw when mouse down
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+    //switch funtion
+    const toDraw = (e) => {
+        ctx.globalCompositeOperation = 'source-over';
+    };
+
+    const toErase = (e) => {
+        ctx.globalCompositeOperation = 'destination-out';
+    };
+
+    drawButton.addEventListener('click', toDraw);
+    eraseButoon.addEventListener('click', toErase);
+
+
+</script>
+
+<style>
+  html, body {
+    margin: 0;
+  }
+</style>
+
+</body>
+</html>
