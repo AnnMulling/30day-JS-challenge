@@ -42,3 +42,19 @@
 <p>⭐ Created a dropdown menu that expands and collapses gracefully as  users interact with it</p>
 
 <p>Need time to master those techniques to create seamless animations and transitions though !!</p>
+
+
+## Day27 Click and Drag to scroll 🖱️ ⏬
+
+<img width="300" height="200" src="./images/day27.gif">
+<p>In this project, I learned how to create a fluid and intuitive scrolling experience by allowing users to click on content and drag it to scroll. The tutorial covered concepts such as event handling, mouse interactions, and manipulating DOM elements to achieve this functionality.<p>
+
+
+## Day28 Video Speed Controller UI ⏩ ✨
+
+<p>Build a user interface that allows users to control the playback speed of videos dynamically. There was something similar we worked with in the previous project, so this is a great memory refresh! </p>
+
+## Day 29 Countdown Timer ⏳
+
+<img width="300" height="200" src="./images/day29.gif">
+<p>Got hands-on experience with the process of creating a dynamic and interactive timer that counts down from a specified duration. Delving deeper into JavaScript concepts such as date manipulation, event handling, and DOM manipulation to create a functional countdown timer.</p>
